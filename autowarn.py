@@ -17,9 +17,9 @@ class AutoWarnforMuteMod(loader.Module):
         fromid = message.from_id
         chatid = message.chat_id
         msg = message.raw_text.split()
-        if (chatid == -1001430533627) and (fromid == 1044037207):
+        if (chatid == -1001387610194) and (fromid == 1626675239):
             if 'длилась:' in msg:
-                x = await message.client.get_participants(-1001430533627, limit=100, filter=ChannelParticipantsBanned)
+                x = await message.client.get_participants(-1001387610194, limit=100, filter=ChannelParticipantsBanned)
                 for i in x:
                     muted.append(i.id)
                 for mid in muted:
