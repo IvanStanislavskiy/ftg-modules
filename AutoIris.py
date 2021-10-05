@@ -31,7 +31,7 @@ class FarmIrisMod(loader.Module):
   status = self.db.get(self.name, "status", False)
   if status: return await message.edit(self.strings['farmon_already'])
   self.db.set(self.name, "status", True)
-  await self.client.send_message(self.iris, "Фарма", schedule=timedelta(seconds=20))
+  await self.client.send_message(self.iris, "Ферма", schedule=timedelta(seconds=20))
   await message.edit(self.strings['farmon'])
   
  async def farmoffcmd(self, message):
@@ -52,8 +52,8 @@ class FarmIrisMod(loader.Module):
   if chat != self.iris: return
   status = self.db.get(self.name, 'status', False)
   if not status: return
-  if event.raw_text == "Фарма":
-   return await self.client.send_message(self.iris, "Фарма", schedule=timedelta(minutes=random.randint(1, 20)))
+  if event.raw_text == "Ферма":
+   return await self.client.send_message(self.iris, "Ферма", schedule=timedelta(minutes=random.randint(1, 20)))
   if event.sender_id != self.iris: return
   if "НЕЗАЧЁТ!" in event.raw_text:
    args = [int(x) for x in event.raw_text.split() if x.isnumeric()]
@@ -64,7 +64,7 @@ class FarmIrisMod(loader.Module):
    else: return
    sch = (await self.client(functions.messages.GetScheduledHistoryRequest(self.iris, 1488))).messages
    await self.client(functions.messages.DeleteScheduledMessagesRequest(self.iris, id=[x.id for x in sch]))
-   return await self.client.send_message(self.iris, 'Фарма', schedule=delta)
+   return await self.client.send_message(self.iris, 'Ферма', schedule=delta)
   if "ЗАЧЁТ" in event.raw_text or 'УДАЧА' in event.raw_text:
    args = event.raw_text.split()
    for x in args:
