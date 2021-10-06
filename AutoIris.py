@@ -7,10 +7,10 @@ from telethon import functions
 from telethon.tl.types import Message
 
 @loader.tds
-class FarmIrisMod(loader.Module):
+class AutoIrisMod(loader.Module):
  """Для автоматического фарминга коинов в ирисботе"""
  strings = {
-  'name': 'farmiris',
+  'name': 'autoiris',
   'farmon': '<i>✅Отлож создан, автофарм запущен, всё начнётся через 20 секунд...</i>',
   'farmon_already': '<i>Уже запущено</i>',
   'farmoff': '<i>❌ Фарм остановлен.\n☢️Собрано:</i> <b>%coins% i¢</b>',
