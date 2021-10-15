@@ -12,7 +12,7 @@ class FrogMod(loader.Module):
             name = me.first_name
 
             if message.chat_id in {-1001363387233}:
-                if message.sender_id in {1568736811}:
+                if message.sender_id in {1124824021}:
                     if "Йоу" in message.message:
                         chat = message.chat_id
                         async with message.client.conversation(chat) as conv:
