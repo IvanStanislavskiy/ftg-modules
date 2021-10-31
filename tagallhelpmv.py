@@ -10,7 +10,7 @@ def register(cb):
     cb(TagallMod())
 
 
-class TagallMod(loader.Module):
+class Tagallv2Mod(loader.Module):
     """Tag"""
     strings = {'name': 'helpmv tag'}
 
