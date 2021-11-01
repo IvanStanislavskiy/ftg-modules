@@ -13,7 +13,7 @@ class FrogMod(loader.Module):
 
     async def watcher(self, message):
         if message.sender_id in {1501652358, 1744359315}:
-            if "Ваня напади" in message.message:
+            if "fdgd" in message.message:
                 await sleep(10)
                 await message.respond('реанимировать жабу')
                 await sleep(10)
