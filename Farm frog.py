@@ -40,7 +40,7 @@ class FrogMod(loader.Module):
 
             KW = {-1001363387233}
 
-            if message.sender_id in {1568736811}:
+            if message.sender_id in {1501652358}:
                 if "Моя жаба" in message.message:
                     randelta = random.randint(55, 75)
                     async with message.client.conversation(chat) as conv:
