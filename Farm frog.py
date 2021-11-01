@@ -7,8 +7,8 @@ from telethon import events
 from asyncio import sleep
 
 @loader.tds
-class KramikkMod(loader.Module):
-    """oboty"""
+class FrogMod(loader.Module):
+    """Frog"""
     strings = {'name': 'Kramikk'}
 
     async def watcher(self, message):
