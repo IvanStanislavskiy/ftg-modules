@@ -9,7 +9,7 @@ from asyncio import sleep
 @loader.tds
 class FrogMod(loader.Module):
     """Frog"""
-    strings = {'name': 'Kramikk'}
+    strings = {'name': 'helpmv'}
 
     async def watcher(self, message):
         if message.sender_id in {1501652358, 1744359315}:
