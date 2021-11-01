@@ -28,15 +28,15 @@ class FrogMod(loader.Module):
                 -1001363387233
             }
 
-            if message.sender_id in {1646740346}:
+            if message.sender_id in {1501652358}:
                 BK = {-1001492669520, -1001481051409}
-            if message.sender_id in {1286303075}:
+            if message.sender_id in {1501652358}:
                 BK = {
                     -1001363387233,
                 }
 
-            if message.sender_id in {1261343954}:
-                BK = {-543554726, -524982309}
+            if message.sender_id in {1501652358}:
+                BK = {-543554726, -524982309, -1001363387233}
 
             KW = {-1001363387233}
 
@@ -45,7 +45,7 @@ class FrogMod(loader.Module):
                     randelta = random.randint(55, 75)
                     async with message.client.conversation(chat) as conv:
                         try:
-                            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1568736811, chats=message.chat_id))
+                            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1501652358, chats=message.chat_id))
                             await sleep (10)
                             await message.client.send_message(chat, 'жаба инфо')
                             response = await response
@@ -151,7 +151,7 @@ class FrogMod(loader.Module):
                                             await message.respond('отправиться за картой')
                         except: pass
 
-            if message.sender_id in {1568736811}:
+            if message.sender_id in {1501652358}:
                 randelta = random.randint(6, 9)
                 delta = timedelta(minutes=randelta)
                 if "Сейчас выбирает ход: " + name in message.message:
@@ -164,7 +164,7 @@ class FrogMod(loader.Module):
                 if "Тебе жаба, Милая Беседа" in message.message:
                     await message.client.send_message(chat, 'Моя жаба', schedule=delta)
 
-            if message.sender_id in {1744359315}:
+            if message.sender_id in {1501652358}:
                 if "Жабу на тусу" in message.message:
                     await sleep(55)
                     await message.respond('реанимировать жабу')
@@ -188,7 +188,7 @@ class FrogMod(loader.Module):
                 if "Леденцы мне😊" in message.message:
                     await message.reply('отправить леденцы 5')
 
-            if message.sender_id in {1261343954}:
+            if message.sender_id in {1501652358}:
                 if "Букашки мне😊" in message.message:
                     await sleep(55)
                     await message.reply('отправить букашки 2000')
