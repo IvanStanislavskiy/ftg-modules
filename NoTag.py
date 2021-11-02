@@ -53,3 +53,4 @@ class NoTagsMod(loader.Module):
             await utils.answer(message, self.strings('do_not_tag_me', message))
         elif utils.get_chat_id(message) in self.db.get('FuckTags', 'strict', []):
             await self.client.send_read_acknowledge(message.chat_id, message)
+
