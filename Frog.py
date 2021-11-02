@@ -17,10 +17,10 @@ class FroggMod(loader.Module):
         name = me.first_name
         randelta = random.randint(7, 9)
 
-        if message.sender_id in {1568736811}:
+        if message.sender_id in {1501652358}:
             if "Моя жаба" in message.message:
                 async with message.client.conversation(chat) as conv:
-                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1501652358, chats=message.chat_id))
+                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1568736811, chats=message.chat_id))
                     await sleep(3)
                     await message.client.send_message(chat, 'жаба инфо')
                     response = await response
