@@ -166,9 +166,11 @@ class FrogMod(loader.Module):
 
             if message.sender_id in {1744359315}:
                 if "Жабу на тусу" in message.message:
-                    await sleep(55)
+                    await sleep(20)
+                    await message.respond('завершить работу')
+                    await sleep(30)
                     await message.respond('реанимировать жабу')
-                    await sleep(55)
+                    await sleep(35)
                     await message.respond('жабу на тусу')
                 if "Клан вознаграждение" in message.message:
                     await message.respond('клан вознаграждение')
@@ -182,6 +184,12 @@ class FrogMod(loader.Module):
                 if "Завершить работу" in message.message:
                     await sleep(5)
                     await message.respond('завершить работу')
+                if "Работа крупье" in message.message:
+                    await sleep(10)
+                    await message.respond('работа крупье')
+                if "Работа грабитель" in message.message:
+                    await sleep(5)
+                    await message.respond('работа грабитель')
 
             if message.chat_id in BK:
                 if "Аптечки мне😊" in message.message:
