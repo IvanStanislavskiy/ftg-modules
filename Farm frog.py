@@ -52,7 +52,7 @@ class FrogMod(loader.Module):
                             
              if message.sender_id in {1744359315}:
                 if "Завершить работу" in message.message:
-                    randelta = random.randint(55, 75)
+                    randelta = random.randint(45, 75)
                     async with message.client.conversation(chat) as conv:
                         try:
                             response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
