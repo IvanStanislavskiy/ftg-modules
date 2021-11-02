@@ -8,15 +8,14 @@ from asyncio import sleep
 
 @loader.tds
 class FroggMod(loader.Module):
-    """helpmv"""
+    """жаба"""
     strings = {'name': 'Jabik'}
 
     async def watcher(self, message):
         chat = message.chat_id
         me = await message.client.get_me()
         name = me.first_name
-        randelta = random.randint(30, 45)
-        EK = {-1001363387233, -519750908}
+        randelta = random.randint(7, 9)
 
         if message.sender_id in {1568736811}:
             if "Моя жаба" in message.message:
@@ -27,9 +26,9 @@ class FroggMod(loader.Module):
                     response = await response
 
                     if "(Можно откормить)" in response.text:
-                        if message.chat_id in EK:
+                        if message.chat_id in {-1001363387233}:
                             delta = timedelta(hours=4, seconds=randelta)
-                            delta_r = timedelta(hours=4, seconds=50)
+                            delta_r = timedelta(hours=4, seconds=15)
                             await sleep(3)
                             await message.respond('откормить жабу')
                             await message.client.send_message(chat, 'откормить жабу', schedule=delta)
@@ -37,46 +36,25 @@ class FroggMod(loader.Module):
                         else:
                             if "Жабу можно покормить" in response.text:
                                 delta = timedelta(hours=12, seconds=randelta)
-                                delta_r = timedelta(hours=12, seconds=50)
+                                delta_r = timedelta(hours=12, seconds=15)
                                 await sleep(3)
                                 await message.respond('покормить жабу')
                                 await message.client.send_message(chat, 'Покормить жабу', schedule=delta)
                                 await message.client.send_message(chat, 'Моя жаба', schedule=delta_r)
 
-                    if "Отправить на" in response.text:
-                        if "Можно отправиться" in response.text:
-                            if message.chat_id in {-1001363387233}:
-                                await sleep(3)
-                                await message.respond('реанимировать жабу')
-                                await sleep(3)
-                                await message.respond('отправиться в золотое подземелье')
-                                response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
-                                await sleep (3)
-                                await message.client.send_message(chat, 'мое снаряжение')
-                                response = await response
-                                if "🗡Ближний бой: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('скрафтить клюв цапли')
-                                if "🏹Дальний бой: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('скрафтить букашкомет')
-                                if "🐸Наголовник: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('скрафтить наголовник из клюва цапли')
-                                if "🥼Нагрудник: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('скрафтить нагрудник из клюва цапли')
-                                if "👞Налапники: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('скрафтить налапники из клюва цапли')
-                                if "🏋️‍♀️Банда: Отсутствует" in response.text:
-                                    await sleep(3)
-                                    await message.respond('собрать банду')
+                    if "Можно отправиться" in response.text:
+                        if message.chat_id in {-1001363387233}:
+                            await sleep(3)
+                            await message.respond('реанимировать жабу')
+                            await sleep(3)
+                            await message.respond('отправиться в золотое подземелье')
 
                     if "Жабу можно отправить" in response.text:
                         delta = timedelta(hours=2, seconds=randelta)
-                        delta_r = timedelta(hours=2, seconds=50)
-                        if message.chat_id in {-1001441941681}:
+                        delta_r = timedelta(hours=2, seconds=15)
+                        delta_k = timedelta(hours=8, seconds=randelta)
+                        delta_kk = timedelta(hours=8, seconds=15)
+                        if message.chat_id in {-519750908}:
                             if "В подземелье можно через 2ч" in response.text:
                                 await sleep(3)
                                 await message.respond('реанимировать жабу')
@@ -84,6 +62,18 @@ class FroggMod(loader.Module):
                                 await message.respond('работа крупье')
                                 await message.client.send_message(chat, 'Завершить работу', schedule=delta)
                                 await message.client.send_message(chat, 'Моя жаба', schedule=delta_r)
+                                response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
+                                await sleep (3)
+                                await message.client.send_message(chat, 'мой клан')
+                                response = await response
+                                if "Клан" in response.text:
+                                    if "🕒Пойти за картой" not in response.text:
+                                        await sleep (3)
+                                        await message.respond('отправиться за картой')
+                                        await sleep (33)
+                                        await message.respond('отправиться за картой')
+                                        await message.client.send_message(chat, 'отправиться за картой', schedule=delta_k)
+                                        await message.client.send_message(chat, 'отправиться за картой', schedule=delta_kk)
                         else:
                             await sleep(3)
                             await message.respond('реанимировать жабу')
@@ -118,13 +108,65 @@ class FroggMod(loader.Module):
                 await sleep(3)
                 await message.respond('жабу на тусу')
 
-        if "Коля напади" in message.message:
-            await sleep(1)
-            await message.respond('реанимировать жабу')
-            await sleep(1)
-            await message.reply('напасть на клан')
-        if "Коля подземелье" in message.message:
-            await sleep(1)
-            await message.respond('реанимировать жабу')
-            await sleep(1)
-            await message.reply('отправиться в золотое подземелье')
+        if message.sender_id in {830605725}:
+            if "Бзззз! С пасеки" in message.message:
+                await message.click(0)
+            if "[8🐝]" in message.message:
+                await message.click(0)
+            if "[4🐝]" in message.message:
+                click = (await message.click(0)).message
+            if "[5🟡🐝," in message.message:
+                await message.click(0)
+            if "[2🦠🐝," in message.message:
+                await message.click(0)
+            if "[5🐝, 3🔴🐝]" in message.message:
+                await message.click(0)
+            if "[2☢️🐝, 2🔴🐝," in message.message:
+                await message.click(0)
+
+        if message.chat_id in {-519750908}:
+            if "Ваня го кв" in message.message:
+                await message.respond('начать клановую войну')
+            if "Ваня напади" in message.message:
+                await sleep(1)
+                await message.respond('реанимировать жабу')
+                await sleep(1)
+                await message.respond('напасть на клан')
+            if "Ваня подземелье" in message.message:
+                await sleep(1)
+                await message.respond('реанимировать жабу')
+                await sleep(1)
+                await message.respond('отправиться в сереберяное подземелье')
+                async with message.client.conversation(chat) as conv:
+                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1501652358, chats=message.chat_id))
+                    await sleep (3)
+                    await message.client.send_message(chat, 'мое снаряжение')
+                    response = await response
+                    if "🗡Ближний бой: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('скрафтить клюв цапли')
+                    if "🏹Дальний бой: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('скрафтить букашкомет')
+                    if "🐸Наголовник: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('скрафтить наголовник из клюва цапли')
+                    if "🥼Нагрудник: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('скрафтить нагрудник из клюва цапли')
+                    if "👞Налапники: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('скрафтить налапники из клюва цапли')
+                    if "🏋️‍♀️Банда: Отсутствует" in response.text:
+                        await sleep(3)
+                        await message.respond('собрать банду')
+            if "Вы успешно покормили жабу!" in message.message:
+                await message.respond('откормить жабу')
+            if "Лена го за картой" in message.message:
+                await message.respond('отправиться за картой')
+            if "Лена инвентарь" in message.message:
+                await message.respond('мой инвентарь')
+            if "Лена леденцы" in message.message:
+                await message.respond('использовать леденцы 3')
+            if "Лена аптечки" in message.message:
+                await message.reply('отправить аптечки 10')
