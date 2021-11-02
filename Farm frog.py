@@ -48,17 +48,7 @@ class FrogMod(loader.Module):
                             response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                             await sleep (10)
                             await message.client.send_message(chat, 'жаба инфо')
-                            response = await response
-                            
-             if message.sender_id in {1744359315}:
-                if "Завершить работу" in message.message:
-                    randelta = random.randint(55, 75)
-                    async with message.client.conversation(chat) as conv:
-                        try:
-                            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
-                            await sleep (10)
-                            await message.client.send_message(chat, 'завершить работу')
-                            response = await response                          
+                            response = await response                                                     
 
                             if "(Можно откормить)" in response.text:
                                 if message.chat_id in EK:
@@ -188,7 +178,10 @@ class FrogMod(loader.Module):
                     await sleep(55)
                     await message.respond('реанимировать жабу')
                     await sleep(55)
-                    await message.respond('напасть на клан')
+                    await message.respond('напасть на клан')           
+                if "Завершить работу" in message.message:
+                    await sleep(5)
+                    await message.respond('завершить работу')
 
             if message.chat_id in BK:
                 if "Аптечки мне😊" in message.message:
