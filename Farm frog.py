@@ -12,8 +12,8 @@ class FrogMod(loader.Module):
     strings = {'name': 'helpmv'}
 
     async def watcher(self, message):
-        if message.sender_id in {1501652358, 1744359315}:
-            if "fdgd" in message.message:
+        if message.sender_id in {1744359315}:
+            if "Напади" in message.message:
                 await sleep(10)
                 await message.respond('реанимировать жабу')
                 await sleep(10)
@@ -45,7 +45,7 @@ class FrogMod(loader.Module):
                     randelta = random.randint(55, 75)
                     async with message.client.conversation(chat) as conv:
                         try:
-                            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1501652358, chats=message.chat_id))
+                            response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                             await sleep (10)
                             await message.client.send_message(chat, 'жаба инфо')
                             response = await response
