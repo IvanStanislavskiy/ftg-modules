@@ -52,7 +52,7 @@ class FrogMod(loader.Module):
                             
              if message.sender_id in {1744359315}:
                 if "Завершить работу" in message.message:
-                    randelta = random.randint(45, 75)
+                    randelta = random.randint(55, 75)
                     async with message.client.conversation(chat) as conv:
                         try:
                             response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
@@ -103,7 +103,7 @@ class FrogMod(loader.Module):
                                 await message.respond('завершить работу')
                                 await message.client.send_message(chat, 'поход в столовую', schedule=delta)
                                 await message.client.send_message(chat, 'Моя жаба', schedule=delta_m)
-                                if message.chat_id not in { -1001363387233}:
+                                if message.chat_id not in {-1001363387233}:
                                     response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                                     await sleep (10)
                                     await message.client.send_message(chat, 'война инфо')
@@ -166,7 +166,7 @@ class FrogMod(loader.Module):
                 delta = timedelta(minutes=randelta)
                 if "Сейчас выбирает ход: " + name in message.message:
                     await message.click(0)
-                if "Лилли чмо " + name in message.message:
+                if "help me im Vania " + name in message.message:
                     await sleep (10)
                     await message.respond('реанимировать жабу')
                     await sleep (10)
