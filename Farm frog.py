@@ -94,7 +94,7 @@ class FrogMod(loader.Module):
                                 await message.client.send_message(chat, 'поход в столовую', schedule=delta)
                                 await message.client.send_message(chat, 'Моя жаба', schedule=delta_m)
                                 if message.chat_id not in { -1001363387233}:
-                                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1568736811, chats=message.chat_id))
+                                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                                     await sleep (10)
                                     await message.client.send_message(chat, 'война инфо')
                                     response = await response
