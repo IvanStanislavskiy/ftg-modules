@@ -17,12 +17,11 @@ class FroggMod(loader.Module):
         name = me.first_name
         randelta = random.randint(30, 45)
         EK = {-1001363387233, -519750908}
-        PI = {1744359315}
 
         if message.sender_id in {1568736811}:
             if "Моя жаба" in message.message:
                 async with message.client.conversation(chat) as conv:
-                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=PI, chats=message.chat_id))
+                    response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                     await sleep(3)
                     await message.client.send_message(chat, 'жаба инфо')
                     response = await response
@@ -51,7 +50,7 @@ class FroggMod(loader.Module):
                                 await message.respond('реанимировать жабу')
                                 await sleep(3)
                                 await message.respond('отправиться в золотое подземелье')
-                                response = conv.wait_event(events.NewMessage(incoming=True, from_users=PI, chats=message.chat_id))
+                                response = conv.wait_event(events.NewMessage(incoming=True, from_users=1744359315, chats=message.chat_id))
                                 await sleep (3)
                                 await message.client.send_message(chat, 'мое снаряжение')
                                 response = await response
