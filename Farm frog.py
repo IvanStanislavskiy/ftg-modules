@@ -156,7 +156,7 @@ class FrogMod(loader.Module):
                 delta = timedelta(minutes=randelta)
                 if "Сейчас выбирает ход: " + name in message.message:
                     await message.click(0)
-                if "help me im Vania " + name in message.message:
+                if "help me i am Vanya " + name in message.message:
                     await sleep (10)
                     await message.respond('реанимировать жабу')
                     await sleep (10)
