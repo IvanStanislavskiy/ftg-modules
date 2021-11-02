@@ -1,4 +1,4 @@
-.. import loader, utils
+from .. import loader, utils
 import asyncio
 import telethon
 
