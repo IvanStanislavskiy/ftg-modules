@@ -26,7 +26,7 @@ class FroggMod(loader.Module):
                     response = await response
 
                     if "(Можно откормить)" in response.text:
-                        if message.chat_id in {-519750908, -1001363387233}:
+                        if message.chat_id in {-1001363387233}:
                             delta = timedelta(hours=4, seconds=randelta)
                             delta_r = timedelta(hours=4, seconds=15)
                             await sleep(3)
