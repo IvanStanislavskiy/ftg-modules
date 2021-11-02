@@ -190,6 +190,12 @@ class FrogMod(loader.Module):
                 if "Работа грабитель" in message.message:
                     await sleep(5)
                     await message.respond('работа грабитель')
+                if "@tgtoadbot Покормить жабу" in message.message:
+                    await sleep(20)
+                    await message.respond('покормить жабу')
+                if "Покормить жабу" in message.message:
+                    await sleep(20)
+                    await message.respond('покормить жабу')
 
             if message.chat_id in BK:
                 if "Аптечки мне😊" in message.message:
