@@ -17,7 +17,7 @@ class FroggMod(loader.Module):
         name = me.first_name
         randelta = random.randint(30, 45)
         EK = {-1001363387233, -519750908}
-        PI = {1501652358, 1744359315}
+        PI = {1744359315 and 1501652358}
 
         if message.sender_id in {1568736811}:
             if "Моя жаба" in message.message:
