@@ -179,6 +179,9 @@ class FrogMod(loader.Module):
                     await message.respond('реанимировать жабу')
                     await sleep(55)
                     await message.respond('напасть на клан')
+                    if "Завершить работу" in message.message:
+                    await sleep(55)
+                    await message.respond('завершить работу')
 
             if message.chat_id in BK:
                 if "Аптечки мне😊" in message.message:
