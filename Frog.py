@@ -43,7 +43,7 @@ class FroggMod(loader.Module):
                                 await message.client.send_message(chat, 'Моя жаба', schedule=delta_r)
 
                     if "Можно отправиться" in response.text:
-                        if message.chat_id in {-519750908, -1001363387233}:
+                        if message.chat_id in {-1001363387233}:
                             await sleep(3)
                             await message.respond('реанимировать жабу')
                             await sleep(3)
