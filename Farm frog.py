@@ -180,7 +180,6 @@ class FrogMod(loader.Module):
                     await sleep(55)
                     await message.respond('напасть на клан')
                 if "Завершить работу" in message.message:
-                    await sleep(20)
                     await message.respond('завершить работу')
 
             if message.chat_id in BK:
