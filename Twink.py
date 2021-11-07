@@ -9,14 +9,13 @@ from asyncio import sleep
 @loader.tds
 class FrogMod(loader.Module):
     """Frog"""
-    strings = {'name': 'twink'}
-    
-        async def watcher(self, message):
+    strings = {'name': 'helpmv'}
+
+    async def watcher(self, message):
         if message.sender_id in {1568736811}:
-            if "реанимируй" in message.message:
+            if "Реанимируй" in message.message:
                 await sleep(10)
                 await message.respond('реанимировать жабу')
-
         try:
             chat = message.chat_id
             me = await message.client.get_me()
