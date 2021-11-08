@@ -197,6 +197,9 @@ class FrogMod(loader.Module):
                 if "Букашки 300" in message.message:
                     await sleep(5)
                     await message.reply('отправить букашки 300')
+                if "Букашки 200" in message.message:
+                    await sleep(5)
+                    await message.reply('отправить букашки 200')
                 if "Букашки 100" in message.message:
                     await sleep(10)
                     await message.reply('отправить букашки 100')
