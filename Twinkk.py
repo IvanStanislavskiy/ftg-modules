@@ -179,21 +179,30 @@ class FrogMod(loader.Module):
                     await message.respond('реанимировать жабу')
                     await sleep(55)
                     await message.respond('напасть на клан')           
-                if "Завершить работу" in message.message:
+                if "завершить работу" in message.message:
                     await sleep(5)
                     await message.respond('завершить работу')
-                if "Работа крупье" in message.message:
+                if "работа крупье" in message.message:
                     await sleep(10)
                     await message.respond('работа крупье')
-                if "Работа грабитель" in message.message:
+                if "работа грабитель" in message.message:
                     await sleep(5)
                     await message.respond('работа грабитель')
-                if "@tgtoadbot Покормить жабу" in message.message:
+                if "@tgtoadbot покормить жабу" in message.message:
                     await sleep(20)
                     await message.respond('покормить жабу')
-                if "Покормить жабу" in message.message:
+                if "покормить жабу" in message.message:
                     await sleep(20)
                     await message.respond('покормить жабу')
+                if "Букашки 300" in message.message:
+                    await sleep(5)
+                    await message.reply('отправить букашки 300')
+                if "Букашки 100" in message.message:
+                    await sleep(10)
+                    await message.reply('отправить букашки 100')
+                if "Моя жаба1" in message.message:
+                    await sleep(5)
+                    await message.respond('моя жаба')
 
             if message.chat_id in BK:
                 if "хуила аптеки" in message.message:
