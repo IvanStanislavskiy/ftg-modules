@@ -151,7 +151,7 @@ class FrogMod(loader.Module):
                                             await message.respond('отправиться за картой')
                         except: pass
 
-            if message.sender_id in {1744359315}:
+            if message.sender_id in {1124824021}:
                 randelta = random.randint(6, 9)
                 delta = timedelta(minutes=randelta)
                 if "Сейчас выбирает ход: " + name in message.message:
