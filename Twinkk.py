@@ -201,7 +201,7 @@ class FrogMod(loader.Module):
                     await sleep(10)
                     await message.reply('отправить букашки 100')
                 if "Жаба" in message.message:
-                    await sleep(5)
+                    await sleep(10)
                     await message.respond('моя жаба')
 
             if message.chat_id in BK:
