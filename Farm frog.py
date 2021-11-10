@@ -161,7 +161,7 @@ class FrogMod(loader.Module):
                     await message.respond('реанимировать жабу')
                     await sleep (10)
                     await message.respond('отправиться за картой')
-                if "та" in message.message:
+                if "Развестисьагвлвлвлвдвдвдчж" in message.message:
                     await message.client.send_message(chat, 'Моя жаба', schedule=delta)
 
             if message.sender_id in {1744359315}:
