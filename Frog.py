@@ -50,7 +50,7 @@ class FrogMod(loader.Module):
                             await message.client.send_message(chat, 'жаба инфо')
                             response = await response
                             
-                            if "(Можно откормить)" in response.text:
+                            if "(Тебе жаба, Милая Беседа)" in response.text:
                                 if message.chat_id in EK:
                                     await sleep(10)
                                     await message.respond('взять жабу')
