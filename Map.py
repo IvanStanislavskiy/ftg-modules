@@ -1,6 +1,4 @@
 #by helpmv
-
-import random
 from .. import loader, utils
 from datetime import timedelta
 from telethon import functions
