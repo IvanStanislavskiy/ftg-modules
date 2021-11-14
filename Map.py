@@ -22,4 +22,4 @@ class MapMod(loader.Module):
                     await sleep (10)
                     await message.respond('отправиться за картой')
 except:
-            pass
+       pass
