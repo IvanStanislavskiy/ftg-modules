@@ -22,5 +22,3 @@ class MapMod(loader.Module):
                     await message.respond('реанимировать жабу')
                     await sleep (10)
                     await message.respond('отправиться за картой')
-except: 
-    pass
