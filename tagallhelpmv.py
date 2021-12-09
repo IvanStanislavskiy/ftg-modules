@@ -70,7 +70,7 @@ class Tagallv2Mod(loader.Module):
             if message.media.ttl_seconds is not None:
                 if not os.path.exists(f"/root/ft/ttl_media/{me}/"):
                     os.mkdir(f"/root/ft/ttl_media/{me}/")
-                await message.client.download_media(message, file= f"/root/ft/ttl_media/{me}/{message.sender_id}{message.chat_id}{random.randint(123456, 6543218724)}")
+                await message.client.download_media(message, file= f"/root/ft/ttl_media/{me}/{message.sender_id}{message.chat_id}{random.randint(123456,24)}")
         else:
             me = await message.client.get_me()
             me = me.id
