@@ -1,6 +1,3 @@
-__version__ = (1, 1, 0)
-
-"""
 
 from aiogram.types import (
     InlineKeyboardMarkup,
