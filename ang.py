@@ -152,7 +152,7 @@ class AirAlertMod(loader.Module):
             await self.inline.form(res, message=message)
         if (
                 getattr(message, "peer_id", False)
-                and getattr(message.peer_id, "channel_id", 0) == -1001387610194
+                and getattr(message.peer_id, "chat_id", 0) == -1001387610194
                 and (
                 "all" in self.regions
                 or any(reg in message.raw_text for reg in self.regions)
