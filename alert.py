@@ -1,20 +1,17 @@
 
-from aiogram.types import (
-    InlineKeyboardMarkup,
-    InlineQueryResultArticle,
-    InlineKeyboardButton,
-    InputTextMessageContent,
-)
-from asyncio import sleep
-from telethon.tl.types import Message
-from telethon.tl.functions.channels import JoinChannelRequest
-from telethon.utils import get_display_name
-from .. import loader  # noqa
 import logging
-from ..inline import GeekInlineQuery, rand  # noqa
-from .. import utils  # noqa
+from asyncio import sleep
+
+from aiogram.types import InlineQueryResultArticle, InputTextMessageContent
+from telethon.tl.functions.channels import JoinChannelRequest
+from telethon.tl.types import Message
+from telethon.utils import get_display_name
+
+from .. import loader, utils
+from ..inline import GeekInlineQuery, rand
 
 logger = logging.getLogger(__name__)
+
 
 ua = [
     "all",
