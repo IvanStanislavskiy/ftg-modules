@@ -192,15 +192,6 @@ class AirAlertMod(loader.Module):
         except Exception:
             logger.error("Can't join t.me/air_alert_ua")
         try:
-            channel = await self.client.get_entity("t.me/morisummermods")
-            await client(JoinChannelRequest(channel))
-        except Exception:
-            logger.error("Can't join morisummermods")
-        try:
-            post = (await client.get_messages("@morisummermods", ids=[15]))[0]
-            await post.react("❤️")
-        except Exception:
-            logger.error("Can't react to t.me/morisummermods")
 
     async def alertforwardcmd(self, message: Message) -> None:
         """Перенаправление предупреждений в другие чаты.
