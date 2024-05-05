@@ -181,11 +181,6 @@ class AirAlertMod(loader.Module):
             )
             return
 
-        self.db = db
-        self.client = client
-        self.bot_id = (await self.inline.bot.get_me()).id
-        self.me = (await client.get_me()).id
-        
     async def alertforwardcmd(self, message: Message) -> None:
         """Перенаправление предупреждений в другие чаты.
         Для добавления/удаления введите команду с ссылкой на чат.
