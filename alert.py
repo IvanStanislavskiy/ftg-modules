@@ -185,14 +185,7 @@ class AirAlertMod(loader.Module):
         self.client = client
         self.bot_id = (await self.inline.bot.get_me()).id
         self.me = (await client.get_me()).id
-        try:
-            await client(
-                JoinChannelRequest(await self.client.get_entity("t.me/air_alert_ua"))
-            )
-        except Exception:
-            logger.error("Can't join t.me/air_alert_ua")
-        try:
-
+        
     async def alertforwardcmd(self, message: Message) -> None:
         """Перенаправление предупреждений в другие чаты.
         Для добавления/удаления введите команду с ссылкой на чат.
